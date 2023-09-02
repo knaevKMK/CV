@@ -1,0 +1,17 @@
+﻿@using Knev.CV.Models;
+
+<div class="card" style="padding:15px; margin:10px; width:auto; height:12rem; ">
+    <div class="card-body">
+        <NavLink href=@Item.Uri> <h3 class="card-title">@Item.Title</h3></NavLink>
+
+        <p class="card-text">@Item.Description</p>
+
+        <NavLink href=@Item.Uri _document>View Original Document</NavLink>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public SertificateModel Item { get; set; } = new();
+
+}
