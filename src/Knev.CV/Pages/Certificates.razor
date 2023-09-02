@@ -1,19 +1,12 @@
 ﻿@page "/certificates"
+@using Knev.CV.Models;
 
 <PageTitle>Certificates</PageTitle>
 
 <h3>Certificates</h3>
 
 @code {
-    private record Sertificate
-    {
-        public string Key { get; set; } = default!;
-        public string Title { get; set; } = default!;
-        public string Uri { get; set; } = default!;
-        public string Description { get; set; } = default!;
-
-    };
-    private Sertificate[] certificates = new Sertificate[14]
+    private SertificateModel[] certificates = new SertificateModel[14]
     {
        //java
        new(){Key= "java_basic", Title="Programming Basics with Java - May 2020", Uri="https://softuni.bg/certificates/details/84229/f49fe307", Description = "" },
@@ -25,7 +18,7 @@
 
        //c#
        new(){Key= "cSharp_fundamentals", Title="C# Fundamentals - May 2020", Uri="https://softuni.bg/Certificates/Details/97187/739d8bc3", Description = "" },
-       
+
        //python
        new(){Key= "python_fundamentals", Title="Python Fundamentals - May 2020", Uri="https://softuni.bg/Certificates/Details/97220/1eb02097", Description = "" },
 

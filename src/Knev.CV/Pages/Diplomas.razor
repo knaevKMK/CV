@@ -1,0 +1,18 @@
+﻿@page "/diplomas"
+@using Knev.CV.Models;
+
+<PageTitle>Diplomas</PageTitle>
+<h3>Diplomas</h3>
+
+@code {
+    private SertificateModel[] diplomas = new SertificateModel[1]
+       {
+       //java
+          new(){  
+               Key= "java_web_dev",
+               Title="Java Web Developer",
+               Uri="https://softuni.bg/certificates/details/185359/0e2b3958",
+               Description = "DIPLOMA for professional qualification. This diploma is issued by Soware University to acknowledge that Krasimir Mishev Kanev has successfully acquired the profession Java Web Developer"
+              }
+       };
+}
