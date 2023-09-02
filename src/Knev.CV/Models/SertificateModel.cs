@@ -1,10 +1,7 @@
 ﻿namespace Knev.CV.Models
 {
-    public class SertificateModel
+    public class SertificateModel : BaseCardModel
     {
-        public string Key { get; set; } = default!;
-        public string Title { get; set; } = default!;
-        public string Uri { get; set; } = default!; 
-        public string Description { get; set; } = default!;
+        public string Uri { get; set; } = default!;
     }
 }

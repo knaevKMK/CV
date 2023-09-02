@@ -2,16 +2,16 @@
 
 <div class="card" style="padding:15px; margin:10px; width:auto; height:12rem; ">
     <div class="card-body">
-        <NavLink href=@Item.Uri> <h3 class="card-title">@Item.Title</h3></NavLink>
+        <h3 class="card-title">@Item.Title</h3>
 
         <p class="card-text">@Item.Description</p>
 
-        <NavLink href=@Item.Uri target="_blank">View Original Document</NavLink>
+
     </div>
 </div>
 
 @code {
     [Parameter]
-    public SertificateModel Item { get; set; } = new();
+    public EducationModel Item { get; set; } = new();
 
 }

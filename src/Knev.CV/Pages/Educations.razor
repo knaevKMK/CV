@@ -1,0 +1,24 @@
+﻿@page "/educations"
+
+@using Knev.CV.Models;
+
+<PageTitle>Educations</PageTitle>
+<h3>Educations</h3>
+
+@foreach (var item in educations)
+{
+    <Knev.CV.Shared.Components.EducationCard Item=@item />
+}
+@code {
+    private EducationModel[] educations = new EducationModel[1]
+            {
+          new(){
+               Key= "java_dev",
+               Title="Java Developer",
+               StartOn= "",
+               EndOn= "",
+               Description = "",
+             //  Modules=new(),
+          }
+        };
+}
