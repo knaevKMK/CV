@@ -13,13 +13,42 @@
     private SertificateModel[] certificates = new SertificateModel[14]
     {
        //DevOps
-       new(){Key= "containers_cloud", Title="Containers and Cloud - May 2023", Uri="https://softuni.bg/Certificates/Details/174463/f58ed696", Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the module: Containers and Cloud" },
-       new(){Key= "devengineer_devops", Title="Software Engineering and DevOps - June 2023",  Uri="https://softuni.bg/Certificates/Details/183294/2cc0a76e", Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Software Engineering and DevOps" },
+       new(){
+           Key= "containers_cloud",
+           Title="Containers and Cloud - May 2023",
+           Uri="https://softuni.bg/Certificates/Details/174463/f58ed696",
+           Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the module: Containers and Cloud" ,
+           Skills=new List<string>{ "azure","linux", "bash", "docker","git", "github"}
+       },
+       new(){
+           Key= "devengineer_devops",
+           Title="Software Engineering and DevOps - June 2023",
+           Uri="https://softuni.bg/Certificates/Details/183294/2cc0a76e",
+           Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Software Engineering and DevOps",
+           Skills=new List<string>{ "azure","linux", "bash", "docker","prometheus","grafana","git", "github","githubactions"}
+       },
 
        //java
-       new(){Key= "spring_fundamentals", Title="Spring Fundamentals - September 2021",Uri="https://softuni.bg/Certificates/Details/117474/a926337b", Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Spring Fundamentals" },
-       new(){Key= "spring_data", Title="Spring Data - June 2021", Uri="https://softuni.bg/Certificates/Details/110171/9043a57a", Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Spring Data" },
-       new(){Key= "java_oop", Title="Java OOP - October 2020",  Uri="https://softuni.bg/Certificates/Details/93584/eb267a97", Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Java OOP" },
+       new(){
+           Key= "spring_fundamentals",
+           Title="Spring Fundamentals - September 2021",
+           Uri="https://softuni.bg/Certificates/Details/117474/a926337b",
+           Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Spring Fundamentals",
+           Skills= new List<string>{"java","idea", "regex"}
+       },
+       new(){
+           Key= "spring_data",
+           Title="Spring Data - June 2021",
+           Uri="https://softuni.bg/Certificates/Details/110171/9043a57a",
+           Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Spring Data" ,
+           Skills= new List<string>{"java","idea","spring", "maven","mysql","hibernate"}
+       },
+       new(){
+           Key= "java_oop", Title="Java OOP - October 2020",
+           Uri="https://softuni.bg/Certificates/Details/93584/eb267a97",
+           Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Java OOP" ,
+           Skills= new List<string>{"java","idea"}
+       },
        new(){Key= "java_advanced", Title="Java Advanced - September 2020",  Uri="https://softuni.bg/Certificates/Details/89879/fb7aee05", Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Java Advanced" },
        new(){Key= "java_fundamentals", Title="Java Fundamentals - May 2020",  Uri="https://softuni.bg/Certificates/Details/97207/2a525f0c", Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Java Fundamentals" },
        new(){Key= "java_basic", Title="Programming Basics with Java - May 2020", Uri="https://softuni.bg/certificates/details/84229/f49fe307", Description = "This certificate is issued by Software University to acknowledge that Krasimir Mishev Kanev has successfully acquired the level: Programming Basics with Java" },

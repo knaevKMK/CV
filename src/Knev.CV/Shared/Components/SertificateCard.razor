@@ -6,7 +6,15 @@
 
         <p class="card-text">@Item.Description</p>
 
-        <NavLink href=@Item.Uri target="_blank">View Original Document</NavLink>
+        <div class="row" style="padding-top:10px; display:block">
+            @if (Item.Skills.Count() > 0)
+            {
+                <span>Skills: </span>
+                <img src=@($"https://skillicons.dev/icons?i={string.Join(",",Item.Skills)}")
+                     style="width:25%; height:2rem;"
+                     alt=@string.Join(", ",Item.Skills) />
+            }
+        </div>
     </div>
 </div>
 

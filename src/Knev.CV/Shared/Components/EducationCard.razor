@@ -3,8 +3,37 @@
 <div class="card" style="padding:15px; margin:10px; width:auto; height:12rem; ">
     <div class="card-body">
         <h3 class="card-title">@Item.Title</h3>
-
-        <p class="card-text">@Item.Description</p>
+        <div class="row" style="display:block">
+            @if (!string.IsNullOrWhiteSpace(Item.SchoolIconUri))
+            {
+                <img src=@Item.SchoolIconUri style="width:6rem; height:4rem;" alt=@Item.School />
+            }
+            @if (!string.IsNullOrWhiteSpace(Item.School))
+            {
+                @if (!string.IsNullOrWhiteSpace(Item.Degree))
+                {
+                    <span class="card-text">from @Item.StartOn  Degree: '@Item.Degree'   At School: @Item.School</span>
+                }
+                else
+                {
+                    <span class="card-text">from @Item.StartOn  At School: @Item.School</span>
+                }
+            }
+            else
+            {
+                <span class="card-text">from @Item.StartOn</span>
+            }
+        </div>
+        <div class="row" style="padding-top:10px; display:block">
+            @if (Item.Skills.Count() > 0)
+            {
+                <span>Skills: </span>
+                @foreach (var icon in Item.Skills)
+                {
+                    <img src=@($"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{icon.Split("-")[0]}/{icon}.svg") style="width:5%; height:5%;" />
+                }
+            }
+        </div>
 
 
     </div>
