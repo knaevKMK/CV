@@ -14,6 +14,7 @@
         public class WorkBoards
         {
             public const string TRELLO = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg";
+            public const string AZURE_DASBOARD = "https://www.incredibuild.com/wp-content/uploads/2020/09/azure_devops-1.png";
         }
         public class OS
         {
@@ -81,6 +82,7 @@
             public const string YML = "https://cdn-icons-png.flaticon.com/512/187/187689.png";
             public const string DEV_OPS = "https://w7.pngwing.com/pngs/659/158/png-transparent-devops-business-process-software-development-process-implementation-business-text-people-logo-thumbnail.png";
             public const string AZURE_BLOB = "http://code.benco.io/icon-collection/azure-icons/Blob-Page.svg";
+            public const string AZURE_SINGLER = "https://pngset.com/images/azure-signalr-service-icon-number-symbol-text-alphabet-transparent-png-1318784.png";
             public const string AZURE_SVC = "";
             public const string AZURE_CACHE_REDIS = "http://code.benco.io/icon-collection/azure-icons/Cache-Redis.svg";
             public const string AZURE_PIPELINE = "https://avatars.slack-edge.com/2019-01-17/528389819366_e7a0672f0480b3e98d21_512.png";
@@ -96,6 +98,13 @@
             public const string PROMETHEUS = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original-wordmark.svg";
             public const string TERRAFORM = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg";
             public const string WORD_PRESS = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg";
+
+            public const string API_MAIL = "https://banner2.cleanpng.com/20171216/dc5/email-png-5a359002d41e30.0549982615134597148688.jpg";
+            public const string API_SMS = "https://w7.pngwing.com/pngs/489/628/png-transparent-sms-text-messaging-computer-icons-message-email-email-miscellaneous-text-multimedia-messaging-service.png";
+
+            public const string ELASTICSEARCH = "https://w7.pngwing.com/pngs/237/349/png-transparent-elasticsearch-apache-lucene-java-scalability-elastica-studio-logo-computer-wallpaper.png";
+            public const string KIBANA = "https://seeklogo.com/images/K/kibana-logo-3CB40921E7-seeklogo.com.png";
+            public const string KYC_VERIFICATION = "https://cdn-icons-png.flaticon.com/512/7355/7355471.png";
         }
 
         public class SourceControl
@@ -121,6 +130,16 @@
         public class Cloud
         {
             public const string AZURE = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg";
+        }
+
+        public class Wallet
+        {
+            public const string BLOCKCAHIN = "https://www.pngitem.com/pimgs/m/299-2994667_blockchain-development-icon-png-transparent-png.png";
+            public const string BITCOIN = "https://cdn.freebiesupply.com/logos/large/2x/bitcoin-logo-png-transparent.png";
+            public const string ETHERIUM = "https://cryptologos.cc/logos/ethereum-eth-logo.png";
+            public const string DODGE = "https://e7.pngegg.com/pngimages/707/440/png-clipart-dogecoin-cryptocurrency-scalable-graphics-dogecoin-text-trademark.png";
+            public const string METAMSK = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1200px-MetaMask_Fox.svg.png";
+            public const string MINING_POOL = "https://w1.pngwing.com/pngs/460/943/png-transparent-cartoon-cloud-bitcoin-mining-mining-pool-cloud-mining-mining-rig-ethereum-bitcoincom-thumbnail.png";
         }
     }
 }
