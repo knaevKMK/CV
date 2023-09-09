@@ -6,8 +6,9 @@
         {
             public const string VisualStudio = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg";
             public const string VS_CODE = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg";
-            public const string INTELI_J = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg";
-            public const string WEB_STORM = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webstorm/webstorm-original-wordmark.svg";
+            public const string INTELI_J = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png";
+            public const string WEB_STORM = "https://upload.wikimedia.org/wikipedia/commons/7/71/WebStorm_Icon.png";
+            public const string RIDER = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/JetBrains_Rider_Icon.svg/1200px-JetBrains_Rider_Icon.svg.png";
         }
 
         public class WorkBoards

@@ -3,44 +3,7 @@
 <PageTitle>Experience</PageTitle>
 
 <h3>Experience</h3>
-
-<div class="@ExpOneCssClass" @onclick="Toggle(@collapseExpOne)">
-    <nav class="flex-column">
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-person" aria-hidden="true"></span>About Me
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="educations">
-                <span class="oi oi-book" aria-hidden="true"></span> Educations
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="diplomas">
-                <span class="oi oi-document" aria-hidden="true"></span> Diplomas
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="certificates">
-                <span class="oi oi-document" aria-hidden="true"></span> Certificates
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="experience">
-                <span class="oi oi-code" aria-hidden="true"></span> Experience
-            </NavLink>
-        </div>
-    </nav>
-</div>
+ 
 @code {
-    private bool collapseExpOne = true;
-
-    private string? ExpOneCssClass => collapseExpOne ? "collapse" : null;
-
-    private void Toggle(bool collapseItem)
-    {
-        collapseItem = !collapseItem;
-    }
+    
 }
