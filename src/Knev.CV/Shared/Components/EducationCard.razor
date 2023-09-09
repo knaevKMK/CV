@@ -1,8 +1,10 @@
 ﻿@using Knev.CV.Models;
 
-<div class="card" style="padding:15px; margin:10px; width:auto; height:12rem; ">
+<div class="card" style="padding:15px; margin:10px; width:auto; height:17%; ">
     <div class="card-body">
-        <h3 class="card-title">@Item.Title</h3>
+        <h3 class="card-title" style="font-size:xxx-large; font-style:italic;">
+            @Item.Title
+        </h3>
         <div class="row" style="display:block">
             @if (!string.IsNullOrWhiteSpace(Item.SchoolIconUri))
             {
@@ -12,16 +14,16 @@
             {
                 @if (!string.IsNullOrWhiteSpace(Item.Degree))
                 {
-                    <span class="card-text">from @Item.StartOn  Degree: '@Item.Degree'   At School: @Item.School</span>
+                    <span class="card-text" style="font-size: xx-large">&#9201 @Item.StartOn &#127891  '@Item.Degree' &#127979 : @Item.School</span>
                 }
                 else
                 {
-                    <span class="card-text">from @Item.StartOn  At School: @Item.School</span>
+                    <span class="card-text" style="font-size: xx-large">&#9201 @Item.StartOn &#x1F3EB  @Item.School</span>
                 }
             }
             else
             {
-                <span class="card-text">from @Item.StartOn</span>
+                <span class="card-text" style="font-size: xx-large">&#9201 @Item.StartOn</span>
             }
         </div>
         <div class="row" style="padding-top:10px; display:block">
@@ -30,7 +32,7 @@
                 <span>Skills: </span>
                 @foreach (var icon in Item.Skills)
                 {
-                    <img src=@($"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{icon.Split("-")[0]}/{icon}.svg") style="width:5%; height:5%;" />
+                    <img src=@icon alt=@icon.Replace("_", "") style="width:4rem; height:3rem;" />
                 }
             }
         </div>

@@ -1,6 +1,8 @@
 ﻿@page "/educations"
 
 @using Knev.CV.Models;
+@using static Knev.CV.Constants.Institution;
+@using static Knev.CV.Constants.SkillIcons;
 
 <PageTitle>Educations</PageTitle>
 <h3>Educations</h3>
@@ -10,130 +12,120 @@
     <Knev.CV.Shared.Components.EducationCard Item=@item />
 }
 @code {
-    //postgresql sqlite visualstudio
-    //postman
-    //powershell
-    //rabbitmq
-    //redis
-    //wordpresswordpress
-    //dotnet cs
     private EducationModel[] educations = new EducationModel[11]
                 {
           new(){
                Key= "dev_ops",
                Title="DevOps",
-               StartOn= "2023/05/01",
-               EndOn= "2023/08/27",
+               StartOn= "2023 may",
+               EndOn= "2023 aug",
                Degree= "DevOps engineer",
-               School="Software University (SoftUni)",
-               SchoolIconUri= "https://media.licdn.com/dms/image/C4D0BAQEApCWzd7I27g/company-logo_100_100/0/1519952435193?e=1701907200&v=beta&t=Vg2SEk-IgljuosX8YFFyZ6jp980bFFUCSkXqyibwUo4",
+               School=SoftUni_NAME,
+               SchoolIconUri= SoftUni_URI,
                Description = "",
-               Skills=new List<string>{ "azure-original","linux-original", "bash-original", "docker-original","prometheus-original","git-original", "github-original"}
-             //  Modules=new(),
+               Skills=new List<string>{ IaC.DEV_OPS, IaC.CONTINUOUS_DELIVERY, Cloud.AZURE,OS.LINUX, Terminals.BASH, Terminals.POWER_SHELL, IaC.COMPOSER, IaC.DOCKER,IaC.YML,IaC.TERRAFORM,IaC.GRAFANA,IaC.PROMETHEUS, SourceControl.GIT, SourceControl.GITHUB}
           },
           new(){
                Key= "kube_dev",
                Title="Kubernetes",
-               StartOn= "2022/08/01",
-               EndOn= "2022/11/30",
-               School="TechWorld with Nana",
-               SchoolIconUri= "https://static.wixstatic.com/media/e7182f_d110772490144eb28ac1a07e95ed9972%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/e7182f_d110772490144eb28ac1a07e95ed9972%7Emv2.png",
+               StartOn= "2022 aug",
+               EndOn= "2022 nov",
+               School=TechWorld_NAME,
+               SchoolIconUri=TechWorld_URI,
                Description = "Kubernetes Courses",
-               Skills=new List<string>{ "nginx-original", "bash-original", "docker-original","kubernetes-plain", }
-             //  Modules=new(),
+               Skills=new List<string>{IaC.DEV_OPS,  IaC.CONTINUOUS_DELIVERY ,  Terminals.BASH,Terminals.POWER_SHELL, IaC.DOCKER,IaC.KUBERNETES,IaC.YML }
           },
           new(){
                Key= "docker_dev",
                Title="Docker for DevOps Engineers",
-               StartOn= "2022/06/01",
-               EndOn= "2022/07/31",
-               School="Amigoscode",
-               SchoolIconUri= "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:60/https://www.filepicker.io/api/file/Dvj31bhYRnqi2TGiKcq7",
+               StartOn= "2022 jun",
+               EndOn= "2022 jul",
+              School=AMIGOS_CODE_NAME,
+               SchoolIconUri= AMIGOS_CODE_URI,
                Description = "Docker for DevOps Engineers Course",
-               Skills=new List<string>{ "linux-original", "bash-original", "docker-original",  "git-original"}
+                Skills=new List<string>{   Terminals.BASH, IaC.DOCKER,SourceControl.GIT }
           },
           new(){
                Key= "csharp_bootcamp",
                Title=".Net Intern",
-               StartOn= "2021/12/18",
-               EndOn= "2022/04/05",
-               School="Software University (SoftUni)",
-               SchoolIconUri= "https://media.licdn.com/dms/image/C4D0BAQEApCWzd7I27g/company-logo_100_100/0/1519952435193?e=1701907200&v=beta&t=Vg2SEk-IgljuosX8YFFyZ6jp980bFFUCSkXqyibwUo4",
+               StartOn= "2021 dec",
+               EndOn= "2022 apr",
+               School=SoftUni_NAME,
+               SchoolIconUri= SoftUni_URI,
                Description = "",
-               Skills=new List<string>{ "visualstudio-plain","nuget-original","vscode-original","javascript-original", "csharp-original",  "react-original","redux-original", "css3-original", "html5-original",  "git-original"}
+               Skills= new List<string>{ Cloud.AZURE, Languages.C_SHARP, Ide.VisualStudio, DotNet.NUGET, DotNet.EF,DotNet.DOT_NET,SQL.MICROSOFT_SQL_SERVER, IaC.AZURE_SQL,// IaC.AZURE_SVC,
+                   IaC.JWT,
+                   Ide.VS_CODE,Languages.JAVA_SCRIPT, JavaScript.REACT, JavaScript.AJAX,JavaScript.HTML_FIVE , JavaScript.CSS_THREE, SourceControl.GIT, SourceControl.GITHUB}
           },
           new(){
                Key= "csharp_dev",
                Title=".Net Engineer",
-               StartOn= "2021/09/01",
+               StartOn= "2021 sep",
                EndOn= "present",
                Degree= "Software engineer",
-               School="Software University (SoftUni)",
-               SchoolIconUri= "https://media.licdn.com/dms/image/C4D0BAQEApCWzd7I27g/company-logo_100_100/0/1519952435193?e=1701907200&v=beta&t=Vg2SEk-IgljuosX8YFFyZ6jp980bFFUCSkXqyibwUo4",
+               School=SoftUni_NAME,
+               SchoolIconUri= SoftUni_URI,
                Description = "",
-               Skills=new List<string>{ "visualstudio-plain",  "csharp-original",  "git-original"}
+               Skills= new List<string>{ Languages.C_SHARP, Ide.VisualStudio,  DotNet.DOT_NET, DotNet.EF,DotNet.EF, SQL.MICROSOFT_SQL_SERVER, SourceControl.GITHUB}
           },
             new(){
                Key= "js_dev",
                Title="JS Web Developer",
-               StartOn= "2021/01/10",
-               EndOn= "2021/10/01",
+               StartOn= "2021 jan",
+               EndOn= "2021 oct",
                Degree= "Software engineer",
-               School="Software University (SoftUni)",
-               SchoolIconUri= "https://media.licdn.com/dms/image/C4D0BAQEApCWzd7I27g/company-logo_100_100/0/1519952435193?e=1701907200&v=beta&t=Vg2SEk-IgljuosX8YFFyZ6jp980bFFUCSkXqyibwUo4",
+               School=SoftUni_NAME,
+               SchoolIconUri= SoftUni_URI,
                Description = "",
-               Skills=new List<string>{"javascript-original","typescript-original" ,"angularjs-original", "bootstrap-original","css3-original", "html5-original",  "jquery-original","nodejs-original","vscode-original"}
-          },
+                Skills= new List<string>{ Languages.JAVA_SCRIPT,Ide.VS_CODE,Ide.WEB_STORM, JavaScript.REACT, JavaScript.ANGULAR,JavaScript.NPM, JavaScript.HTML_FIVE, JavaScript.CSS_THREE, SourceControl.GITHUB }  },
           new(){
                Key= "java_security",
                Title="Spring Security",
-               StartOn= "2021/06/30",
-               EndOn= "2021/08/31",
-               School="Amigoscode",
-               SchoolIconUri= "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:60/https://www.filepicker.io/api/file/Dvj31bhYRnqi2TGiKcq7",
+               StartOn= "2021 jun",
+               EndOn= "2021 aug",
+               School=AMIGOS_CODE_NAME,
+               SchoolIconUri= AMIGOS_CODE_URI,
                Description = "Spring Security Course & Spring Boot For Beginenrs",
-               Skills= new List<string>{"java-original","jetbrains-original","spring-original"}
+               Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J,Java.SPRING,Java.SPRING_SECURITY, IaC.JWT,SQL.MySQL }
           },
           new(){
                Key= "java_dev",
                Title="Java Web Developer",
-               StartOn= "2020/04/30",
-               EndOn= "2021/12/18",
+               StartOn= "2020 apr",
+               EndOn= "2021 dec",
                Degree= "Software engineer",
-               School="Software University (SoftUni)",
-               SchoolIconUri= "https://media.licdn.com/dms/image/C4D0BAQEApCWzd7I27g/company-logo_100_100/0/1519952435193?e=1701907200&v=beta&t=Vg2SEk-IgljuosX8YFFyZ6jp980bFFUCSkXqyibwUo4",
-               Description = "",
-               Skills= new List<string>{"github-original","java-original","jetbrains-original","spring-original", "gradle-plain", "mysql-original" }
+               School=SoftUni_NAME,
+               SchoolIconUri= SoftUni_URI,
+                              Description = "",
+                 Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J,Java.SPRING,Java.SPRING_MVC,Java.SPRING_DATA,Java.SPRING_SECURITY,Java.TOM_CAT,SQL.MySQL }
           },
           new(){
                Key= "private_hire_driver",
                Title="PHD",
-               StartOn= "2019/07/01",
-               EndOn= "2019/10/01",
-               School="ABC Learning Academy, London",
-           //    SchoolIconUri="http://abclearningacademy.co.uk/wp-content/uploads/2018/12/logo-3.png",
+               StartOn= "2019 july",
+               EndOn= "2019 sept",
+               School=ABC_NAME,
                Description = "English Level B"
           },
           new(){
                Key= "c_plus_plus",
                Title="C++",
-               StartOn= "2011/10/01",
-               EndOn= "2012/12/10",
-               School= "Plovdivski universitet 'Paisii Hilendarski', Bulgaria",
-               SchoolIconUri="https://media.licdn.com/dms/image/C510BAQEce2op7qYp3w/company-logo_100_100/0/1519892552291?e=1701907200&v=beta&t=M2jTSJQJ89N5sBoqNmy_1qZXY48Xl9vrEOD-Ki98k6k",
+               StartOn= "2011 oct",
+               EndOn= "2012 dec",
+               School=PU_NAME ,
+               SchoolIconUri=  PU_URI ,
                Description = "Self education",
-               Skills= new List<string>{"cplusplus-original","c-original"},
+                 Skills= new List<string>{ Languages.C,Languages.C_PLUS_PLUS }
           },
            new(){
                Key= "psyhilogy",
                Title="Psyhilogy",
-               StartOn= "2005/09/01",
-               EndOn= "2011/07/30",
+               StartOn= "2005 sept",
+               EndOn= "2011 july",
                Degree="Master's & Bachelor's degree",
-               School= "Plovdivski universitet 'Paisii Hilendarski', Bulgaria",
-               SchoolIconUri="https://media.licdn.com/dms/image/C510BAQEce2op7qYp3w/company-logo_100_100/0/1519892552291?e=1701907200&v=beta&t=M2jTSJQJ89N5sBoqNmy_1qZXY48Xl9vrEOD-Ki98k6k",
+               School=PU_NAME ,
+               SchoolIconUri=  PU_URI ,
                Description = "",
-             //  Modules=new(),
           },
         };
 }
