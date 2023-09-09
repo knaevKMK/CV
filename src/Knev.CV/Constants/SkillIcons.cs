@@ -55,7 +55,7 @@
             public const string BOOTSTRAP = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg";
             public const string CSS_THREE = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg";
             public const string HTML_FIVE = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg";
-            public const string J_QUERY = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg";
+            public const string JQUERY = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg";
             public const string NODE_JS = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg";
             public const string NPM = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg";
             public const string AJAX = "https://uxwing.com/wp-content/themes/uxwing/download/file-and-folder-type/ajax-icon.png";
@@ -64,7 +64,7 @@
 
         public class SQL
         {
-            public const string SQL_SERVER = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg";
+            public const string SQL_SERVER = "http://code.benco.io/icon-collection/azure-icons/SQL-Database.svg";
             public const string POSTGRESQL = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg";
             public const string MySQL = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg";
             public const string MYSQL_SERVER = "https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-cdb-for-mysql-7.png";
@@ -80,10 +80,10 @@
             public const string JWT = "https://play-lh.googleusercontent.com/3C-hB-KWoyWzZjUnRsXUPu-bqB3HUHARMLjUe9OmPoHa6dQdtJNW30VrvwQ1m7Pln3A=w600-h300-pc0xffffff-pd";
             public const string CONTINUOUS_DELIVERY = "https://www.tothenew.com/blog/wp-content/uploads/2016/12/use-case-graphic_continuous-delivery.png";
             public const string YML = "https://cdn-icons-png.flaticon.com/512/187/187689.png";
-            public const string DEV_OPS = "https://w7.pngwing.com/pngs/659/158/png-transparent-devops-business-process-software-development-process-implementation-business-text-people-logo-thumbnail.png";
+            public const string DEVOPS = "https://w7.pngwing.com/pngs/659/158/png-transparent-devops-business-process-software-development-process-implementation-business-text-people-logo-thumbnail.png";
             public const string AZURE_BLOB = "http://code.benco.io/icon-collection/azure-icons/Blob-Page.svg";
-            public const string AZURE_SINGLER = "https://pngset.com/images/azure-signalr-service-icon-number-symbol-text-alphabet-transparent-png-1318784.png";
-            public const string AZURE_SVC = "";
+            public const string AZURE_SignalR = "https://pngset.com/images/azure-signalr-service-icon-number-symbol-text-alphabet-transparent-png-1318784.png";
+            public const string AZURE_SVC = "https://static-00.iconduck.com/assets.00/service-bus-topics-and-subscriptions-icon-450x512-3rtbj66b.png";
             public const string AZURE_CACHE_REDIS = "http://code.benco.io/icon-collection/azure-icons/Cache-Redis.svg";
             public const string AZURE_PIPELINE = "https://avatars.slack-edge.com/2019-01-17/528389819366_e7a0672f0480b3e98d21_512.png";
             public const string AZURE_CONTAINER_REGISTRY = "http://code.benco.io/icon-collection/azure-icons/Container-Registries.svg";

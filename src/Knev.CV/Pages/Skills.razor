@@ -5,126 +5,26 @@
 <PageTitle>Skills</PageTitle>
 
 
-<button title="Collapse Skills" class="navbar-toggler" @onclick="ToggleAll" style="font-size:xx-large">
+<h3>
     Skills
-</button>
+</h3>
 
-<ul>
-    <li>
-        <h3>
-            Ide <button class="navbar-toggler" @onclick="() => Toggle(ref collapseSkillsIde)">
-                <span class=@BtnIconIde></span> @BtnTextIde
-            </button>
-        </h3>
-        <div class=@CssClassIde>
-            <div class="row" style="padding-top:10px; display:block">
-                @foreach (var item in Ide)
-                {
-                    <span>@item.Key.Replace("_"," ") <img src=@item.Value style="width:4rem; height:3rem;" /> </span>
-                }
-            </div>
-        </div>
-    </li>
+<Knev.CV.Shared.Components.SkillCard Skills=@Ide Title="Ide" />
 
-    <li>
-        <h3>
-            .Net <button class="navbar-toggler" @onclick="() => Toggle(ref collapseSkillsDotNet)">
-                <span class=@BtnIconDotNet></span> @BtnTextDotNet
-            </button>
-        </h3>
-        <div class=@CssClassDotNet>
-            <div class="row" style="padding-top:10px; display:block">
-                @foreach (var item in DotNet)
-                {
-                    <span>@item.Key.Replace("_"," ") <img src=@item.Value style="width:4rem; height:3rem;" /> </span>
-                }
-            </div>
-        </div>
-    </li>
+<Knev.CV.Shared.Components.SkillCard Skills=@DotNet Title=".Net" />
 
-    <li>
-        <h3>
-            JS & FrontEnd <button class="navbar-toggler" @onclick="() => Toggle(ref collapseSkillsJavaScript)">
-                <span class=@BtnIconJavaScript></span> @BtnTextJavaScript
-            </button>
-        </h3>
-        <div class=@CssClassJavaScript>
-            <div class="row" style="padding-top:10px; display:block">
-                @foreach (var item in JavaScript)
-                {
-                    <span>@item.Key.Replace("_"," ") <img src=@item.Value style="width:4rem; height:3rem;" /> </span>
-                }
-            </div>
-        </div>
-    </li>
+<Knev.CV.Shared.Components.SkillCard Skills=@JavaScript Title="JS & FrontEnd" />
 
-    <li>
-        <h3>
-            DataBase, SQL <button class="navbar-toggler" @onclick="() => Toggle(ref collapseSkillsSQL)">
-                <span class=@BtnIconSQL></span> @BtnTextSQL
-            </button>
-        </h3>
-        <div class=@CssClassSQL>
-            <div class="row" style="padding-top:10px; display:block">
-                @foreach (var item in SQL)
-                {
-                    <span>@item.Key.Replace("_"," ") <img src=@item.Value style="width:4rem; height:3rem;" /> </span>
-                }
-            </div>
-        </div>
-    </li>
+<Knev.CV.Shared.Components.SkillCard Skills=@SQL Title="DataBase & SQL" />
 
-     <li>
-        <h3>
-            DevOps & Beckend <button class="navbar-toggler" @onclick="() => Toggle(ref collapseSkillsIaC)">
-                <span class=@BtnIconIaC></span> @BtnTextIaC
-            </button>
-        </h3>
-        <div class=@CssClassIaC>
-            <div class="row" style="padding-top:10px; display:block">
-                @foreach (var item in IaC)
-                {
-                    <span>@item.Key.Replace("_"," ") <img src=@item.Value style="width:4rem; height:3rem;" /> </span>
-                }
-            </div>
-        </div>
-    </li>
+<Knev.CV.Shared.Components.SkillCard Skills=@IaC Title="DevOps & Beckend" />
 
-      <li>
-        <h3>
-            Java <button class="navbar-toggler" @onclick="() => Toggle(ref collapseSkillsJava)">
-                <span class=@BtnIconJava></span> @BtnTextJava
-            </button>
-        </h3>
-        <div class=@CssClassJava>
-            <div class="row" style="padding-top:10px; display:block">
-                @foreach (var item in Java)
-                {
-                    <span>@item.Key.Replace("_"," ") <img src=@item.Value style="width:4rem; height:3rem;" /> </span>
-                }
-            </div>
-        </div>
-    </li>
-    
-      <li>
-        <h3>
-            SourceControl <button class="navbar-toggler" @onclick="() => Toggle(ref collapseSkillsSourceControl)">
-                <span class=@BtnIconSourceControl></span> @BtnTextSourceControl
-            </button>
-        </h3>
-        <div class=@CssClassSourceControl>
-            <div class="row" style="padding-top:10px; display:block">
-                @foreach (var item in SourceControl)
-                {
-                    <span>@item.Key.Replace("_"," ") <img src=@item.Value style="width:4rem; height:3rem;" /> </span>
-                }
-            </div>
-        </div>
-    </li>
+<Knev.CV.Shared.Components.SkillCard Skills=@Java Title="Java" />
 
-</ul>
+<Knev.CV.Shared.Components.SkillCard Skills=@SourceControl Title="Source Control" />
+
 @code {
-    
+
     private Dictionary<string, string> Ide => typeof(Ide).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
     private Dictionary<string, string> DotNet => typeof(DotNet).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
     private Dictionary<string, string> JavaScript => typeof(JavaScript).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
@@ -133,71 +33,4 @@
     private Dictionary<string, string> Java => typeof(Java).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
     private Dictionary<string, string> SourceControl => typeof(SourceControl).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
 
-    private bool collapseSkillsIde = true;
-    private bool collapseSkillsDotNet = true;
-    private bool collapseSkillsJavaScript = true;
-    private bool collapseSkillsSQL = true;
-    private bool collapseSkillsIaC = true;
-    private bool collapseSkillsJava = true;
-    private bool collapseSkillsSourceControl = true;
-
-    private string? CssClassIde => collapseSkillsIde ? COLLAPSE_CLASS : null;
-    private string? CssClassDotNet => collapseSkillsDotNet ? COLLAPSE_CLASS : null;
-    private string? CssClassJavaScript => collapseSkillsJavaScript ? COLLAPSE_CLASS : null;
-    private string? CssClassSQL => collapseSkillsSQL ? COLLAPSE_CLASS : null;
-    private string? CssClassIaC => collapseSkillsIaC ? COLLAPSE_CLASS : null;
-    private string? CssClassJava => collapseSkillsJava ? COLLAPSE_CLASS : null;
-    private string? CssClassSourceControl => collapseSkillsSourceControl ? COLLAPSE_CLASS : null;
-
-    private string? BtnTextIde => collapseSkillsIde ? EXPAND_TEXT: HIDE_TEXT;
-    private string? BtnTextDotNet => collapseSkillsDotNet ? EXPAND_TEXT: HIDE_TEXT;
-    private string? BtnTextJavaScript => collapseSkillsJavaScript ? EXPAND_TEXT: HIDE_TEXT;
-    private string? BtnTextSQL => collapseSkillsSQL ? EXPAND_TEXT: HIDE_TEXT;
-    private string? BtnTextIaC => collapseSkillsIaC ? EXPAND_TEXT: HIDE_TEXT;
-    private string? BtnTextJava => collapseSkillsJava ? EXPAND_TEXT: HIDE_TEXT;
-    private string? BtnTextSourceControl => collapseSkillsSourceControl ? EXPAND_TEXT: HIDE_TEXT;
-
-    private string? BtnIconIde => !collapseSkillsIde ? EXPAND_ARROW: HIDE_ARROW;
-    private string? BtnIconDotNet => !collapseSkillsDotNet ? EXPAND_ARROW: HIDE_ARROW;
-    private string? BtnIconJavaScript => !collapseSkillsJavaScript ? EXPAND_ARROW: HIDE_ARROW;
-    private string? BtnIconSQL => !collapseSkillsSQL ? EXPAND_ARROW: HIDE_ARROW;
-    private string? BtnIconIaC => !collapseSkillsIaC ? EXPAND_ARROW: HIDE_ARROW;
-    private string? BtnIconJava => !collapseSkillsJava ? EXPAND_ARROW: HIDE_ARROW;
-    private string? BtnIconSourceControl => !collapseSkillsSourceControl ? EXPAND_ARROW: HIDE_ARROW;
-
-    private void ToggleAll()
-    {
-        if (collapseSkillsIde && collapseSkillsDotNet && collapseSkillsJavaScript && collapseSkillsJavaScript && collapseSkillsSQL && collapseSkillsIaC && collapseSkillsJava && collapseSkillsSourceControl)
-        {
-            collapseSkillsIde = true;
-            collapseSkillsDotNet = true;
-            collapseSkillsJavaScript = true;
-            collapseSkillsSQL = true;
-            collapseSkillsIaC = true;
-            collapseSkillsJava = true;
-            collapseSkillsSourceControl = true;
-        }
-        else
-        {
-            collapseSkillsIde = false;
-            collapseSkillsDotNet = false;
-            collapseSkillsJavaScript = false;
-            collapseSkillsSQL = false;
-            collapseSkillsIaC = false;
-            collapseSkillsJava = false;
-            collapseSkillsSourceControl = false;
-        }
-        Toggle(ref collapseSkillsIde);
-        Toggle(ref collapseSkillsDotNet);
-        Toggle(ref collapseSkillsJavaScript);
-        Toggle(ref collapseSkillsSQL);
-        Toggle(ref collapseSkillsIaC);
-        Toggle(ref collapseSkillsJava);
-        Toggle(ref collapseSkillsSourceControl);
-    }
-
-    private void Toggle(ref bool collapse)
-    {
-        collapse = !collapse;
-    }
 }
