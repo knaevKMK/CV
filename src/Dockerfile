@@ -7,10 +7,11 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Knev.CV/Knev.CV.csproj", "Knev.CV/"]
-RUN dotnet restore "Knev.CV/Knev.CV.csproj"
+COPY ["/Knev.CV/Knev.CV.csproj", "/Knev.CV/"]
+RUN dotnet restore "/Knev.CV/Knev.CV.csproj"
 COPY . .
 WORKDIR "/src/Knev.CV"
+RUN ls 
 RUN dotnet build "Knev.CV.csproj" -c Release -o /app/build
 
 FROM build AS publish
