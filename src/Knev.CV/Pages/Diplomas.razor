@@ -1,0 +1,21 @@
+﻿@page "/diplomas"
+@using Knev.CV.Models;
+
+<PageTitle>Diplomas</PageTitle>
+<h3>Diplomas</h3>
+@foreach (var item in diplomas)
+{
+    <Knev.CV.Shared.Components.CertificateCard Item=@item />
+}
+@code {
+    private CertificateModel[] diplomas = new CertificateModel[1]
+       {
+       //java
+          new(){
+               Key= "java_web_dev",
+               Title="Java Web Developer",
+               Uri="https://softuni.bg/certificates/details/185359/0e2b3958",
+               Description = "DIPLOMA for professional qualification. This diploma is issued by Software University to acknowledge that K.M.K. has successfully acquired the profession Java Web Developer",
+          }
+       };
+}

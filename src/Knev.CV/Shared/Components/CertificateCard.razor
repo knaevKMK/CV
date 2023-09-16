@@ -1,0 +1,26 @@
+﻿@using Knev.CV.Models;
+
+<div class="card" style="padding:15px; margin:10px; width:auto; height:17%; ">
+    <div class="card-body">
+        <NavLink href=@Item.Uri target="_blank"> <h3 class="card-title" style="font-size:xxx-large; font-style:italic;">@Item.Title</h3></NavLink>
+
+        <p class="card-text">@Item.Description</p>
+
+        <div class="row" style="padding-top:10px; display:block">
+            @if (Item.Skills.Count() > 0)
+            {
+                <span>Skills: </span>
+                @foreach (var icon in Item.Skills)
+                {
+                    <img src=@icon alt=@icon.Replace("_", "") style="width:4rem; height:3rem;" />
+                }
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public CertificateModel Item { get; set; } = new();
+
+}

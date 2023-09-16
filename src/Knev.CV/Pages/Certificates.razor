@@ -1,0 +1,114 @@
+﻿@page "/certificates"
+@using Knev.CV.Models;
+@using static Knev.CV.Constants.SkillIcons;
+
+<PageTitle>Certificates</PageTitle>
+
+<h3>Certificates</h3>
+
+@foreach (var item in certificates)
+{
+    <Knev.CV.Shared.Components.CertificateCard Item=@item />
+}
+@code {
+    private CertificateModel[] certificates = new CertificateModel[13]
+    {
+       //DevOps
+       new(){
+           Key= "containers_cloud",
+           Title="Containers and Cloud - May 2023",
+           Uri="https://softuni.bg/Certificates/Details/174463/f58ed696",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the module: Containers and Cloud" ,
+           Skills=new List<string>{ IaC.DEVOPS, IaC.CONTINUOUS_DELIVERY, Cloud.AZURE,OS.LINUX, Terminals.BASH, Terminals.POWER_SHELL, IaC.COMPOSER, IaC.DOCKER,IaC.YML,IaC.TERRAFORM,  SourceControl.GIT, SourceControl.GITHUB}
+      },
+       new(){
+           Key= "devengineer_devops",
+           Title="Software Engineering and DevOps - June 2023",
+           Uri="https://softuni.bg/Certificates/Details/183294/2cc0a76e",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: Software Engineering and DevOps",
+           Skills=new List<string>{ IaC.DEVOPS, IaC.CONTINUOUS_DELIVERY, Cloud.AZURE,OS.LINUX, Terminals.BASH, Terminals.POWER_SHELL,  IaC.YML, IaC.GRAFANA,IaC.PROMETHEUS, SourceControl.GIT, SourceControl.GITHUB}
+    },
+
+       //java
+       new(){
+           Key= "spring_fundamentals",
+           Title="Spring Fundamentals - September 2021",
+           Uri="https://softuni.bg/Certificates/Details/117474/a926337b",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: Spring Fundamentals",
+           Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J,Java.SPRING,Java.SPRING_MVC,Java.SPRING_DATA,Java.SPRING_SECURITY,Java.TOM_CAT,SQL.MySQL, SourceControl.GITHUB }
+       },
+       new(){
+           Key= "spring_data",
+           Title="Spring Data - June 2021",
+           Uri="https://softuni.bg/Certificates/Details/110171/9043a57a",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: Spring Data" ,
+            Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J,Java.SPRING,Java.HIBERNATE,SQL.MySQL }
+       },
+       new(){
+           Key= "java_oop", Title="Java OOP - October 2020",
+           Uri="https://softuni.bg/Certificates/Details/93584/eb267a97",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: Java OOP" ,
+            Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J,Java.SPRING }
+       },
+       new(){
+           Key= "java_advanced", Title="Java Advanced - September 2020",
+           Uri="https://softuni.bg/Certificates/Details/89879/fb7aee05",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: Java Advanced",
+           Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J }
+       },
+       new(){
+           Key= "java_fundamentals",
+           Title="Java Fundamentals - May 2020",
+           Uri="https://softuni.bg/Certificates/Details/97207/2a525f0c",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: Java Fundamentals" ,
+           Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J ,SourceControl.GITHUB}},
+       new(){
+           Key= "java_basic",
+           Title="Programming Basics with Java - May 2020",
+           Uri="https://softuni.bg/certificates/details/84229/f49fe307",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: Programming Basics with Java",
+           Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J }
+       },
+
+       //data_base
+       new(){
+           Key= "my_sql", Title="MySQL - May 2021",
+           Uri="https://softuni.bg/Certificates/Details/107746/cfeee927",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: MySQL" ,
+              Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J,Java.SPRING,SQL.MySQL, SQL.MYSQL_SERVER }
+       },
+
+       //c#
+       new(){
+           Key= "cSharp_fundamentals",
+           Title="C# Fundamentals - May 2020",
+           Uri="https://softuni.bg/Certificates/Details/97187/739d8bc3",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: C# Fundamentals",
+           Skills= new List<string>{ Languages.C_SHARP, Ide.VisualStudio,DotNet.LINQ, SourceControl.GITHUB }
+       },
+
+       //python
+       //new(){Key= "python_fundamentals", Title="Python Fundamentals - May 2020",  Uri="https:softuni.bg/Certificates/Details/97220/1eb02097", Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: Python Fundamentals" },
+
+       //js
+       new(){
+           Key= "js_fundamentals", Title="JS Fundamentals - May 2020",
+           Uri="https://softuni.bg/Certificates/Details/97196/b8d3237c",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: JS Fundamentals",
+           Skills= new List<string>{ Languages.JAVA_SCRIPT,Ide.VS_CODE, JavaScript.HTML_FIVE, SourceControl.GITHUB }
+        },
+       new(){
+           Key= "js_advanced", Title="JS Advanced - January 2021",
+           Uri="https://softuni.bg/Certificates/Details/98366/1b0b761e", Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: JS Advanced",
+          Skills= new List<string>{ Languages.JAVA_SCRIPT,Ide.VS_CODE, JavaScript.HTML_FIVE, JavaScript.CSS_THREE, SourceControl.GITHUB }
+       },
+       new(){
+           Key= "js_application", Title="JS Application - February 2021",
+           Uri="https://softuni.bg/Certificates/Details/102434/7037d7b3",
+           Description = "This certificate is issued by Software University to acknowledge that K.M.K. has successfully acquired the level: JS Application",
+           Skills= new List<string>{ Languages.JAVA_SCRIPT,Ide.VS_CODE, JavaScript.HTML_FIVE, JavaScript.CSS_THREE, SourceControl.GITHUB }
+       },
+    };
+
+
+}

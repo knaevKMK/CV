@@ -1,0 +1,131 @@
+﻿@page "/educations"
+
+@using Knev.CV.Models;
+@using static Knev.CV.Constants.Institution;
+@using static Knev.CV.Constants.SkillIcons;
+
+<PageTitle>Educations</PageTitle>
+<h3>Educations</h3>
+
+@foreach (var item in educations)
+{
+    <Knev.CV.Shared.Components.EducationCard Item=@item />
+}
+@code {
+    private EducationModel[] educations = new EducationModel[11]
+                {
+          new(){
+               Key= "dev_ops",
+               Title="DevOps",
+               StartOn= "2023 may",
+               EndOn= "2023 aug",
+               Degree= "DevOps engineer",
+               School=SoftUni_NAME,
+               SchoolIconUri= SoftUni_URI,
+               Description = "",
+               Skills=new List<string>{ IaC.DEVOPS, IaC.CONTINUOUS_DELIVERY, Cloud.AZURE,OS.LINUX, Terminals.BASH, Terminals.POWER_SHELL, IaC.COMPOSER, IaC.DOCKER,IaC.YML,IaC.TERRAFORM,IaC.GRAFANA,IaC.PROMETHEUS, SourceControl.GIT, SourceControl.GITHUB}
+          },
+          new(){
+               Key= "kube_dev",
+               Title="Kubernetes",
+               StartOn= "2022 aug",
+               EndOn= "2022 nov",
+               School=TechWorld_NAME,
+               SchoolIconUri=TechWorld_URI,
+               Description = "Kubernetes Courses",
+               Skills=new List<string>{IaC.DEVOPS,  IaC.CONTINUOUS_DELIVERY ,  Terminals.BASH,Terminals.POWER_SHELL, IaC.DOCKER,IaC.KUBERNETES,IaC.YML }
+          },
+          new(){
+               Key= "docker_dev",
+               Title="Docker for DevOps Engineers",
+               StartOn= "2022 jun",
+               EndOn= "2022 jul",
+              School=AMIGOS_CODE_NAME,
+               SchoolIconUri= AMIGOS_CODE_URI,
+               Description = "Docker for DevOps Engineers Course",
+                Skills=new List<string>{   Terminals.BASH, IaC.DOCKER,SourceControl.GIT }
+          },
+          new(){
+               Key= "csharp_bootcamp",
+               Title=".Net Intern",
+               StartOn= "2021 dec",
+               EndOn= "2022 apr",
+               School=SoftUni_NAME,
+               SchoolIconUri= SoftUni_URI,
+               Description = "",
+               Skills= new List<string>{ Cloud.AZURE, Languages.C_SHARP, Ide.VisualStudio, DotNet.NUGET, DotNet.EF,DotNet.DOT_NET,SQL.MICROSOFT_SQL_SERVER, IaC.AZURE_SQL,// IaC.AZURE_SVC,
+                   IaC.JWT,
+                   Ide.VS_CODE,Languages.JAVA_SCRIPT, JavaScript.REACT, JavaScript.AJAX,JavaScript.HTML_FIVE , JavaScript.CSS_THREE, SourceControl.GIT, SourceControl.GITHUB}
+          },
+          new(){
+               Key= "csharp_dev",
+               Title=".Net Engineer",
+               StartOn= "2021 sep",
+               EndOn= "present",
+               Degree= "Software engineer",
+               School=SoftUni_NAME,
+               SchoolIconUri= SoftUni_URI,
+               Description = "",
+               Skills= new List<string>{ Languages.C_SHARP, Ide.VisualStudio,  DotNet.DOT_NET, DotNet.EF,DotNet.EF, SQL.MICROSOFT_SQL_SERVER, SourceControl.GITHUB}
+          },
+            new(){
+               Key= "js_dev",
+               Title="JS Web Developer",
+               StartOn= "2021 jan",
+               EndOn= "2021 oct",
+               Degree= "Software engineer",
+               School=SoftUni_NAME,
+               SchoolIconUri= SoftUni_URI,
+               Description = "",
+                Skills= new List<string>{ Languages.JAVA_SCRIPT,Ide.VS_CODE,Ide.WEB_STORM, JavaScript.REACT, JavaScript.ANGULAR,JavaScript.NPM, JavaScript.HTML_FIVE, JavaScript.CSS_THREE, SourceControl.GITHUB }  },
+          new(){
+               Key= "java_security",
+               Title="Spring Security",
+               StartOn= "2021 jun",
+               EndOn= "2021 aug",
+               School=AMIGOS_CODE_NAME,
+               SchoolIconUri= AMIGOS_CODE_URI,
+               Description = "Spring Security Course & Spring Boot For Beginenrs",
+               Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J,Java.SPRING,Java.SPRING_SECURITY, IaC.JWT,SQL.MySQL }
+          },
+          new(){
+               Key= "java_dev",
+               Title="Java Web Developer",
+               StartOn= "2020 apr",
+               EndOn= "2021 dec",
+               Degree= "Software engineer",
+               School=SoftUni_NAME,
+               SchoolIconUri= SoftUni_URI,
+                              Description = "",
+                 Skills= new List<string>{ Languages.JAVA,Ide.INTELI_J,Java.SPRING,Java.SPRING_MVC,Java.SPRING_DATA,Java.SPRING_SECURITY,Java.TOM_CAT,SQL.MySQL }
+          },
+          new(){
+               Key= "private_hire_driver",
+               Title="PHD",
+               StartOn= "2019 july",
+               EndOn= "2019 sept",
+               School=ABC_NAME,
+               Description = "English Level B"
+          },
+          new(){
+               Key= "c_plus_plus",
+               Title="C++",
+               StartOn= "2011 oct",
+               EndOn= "2012 dec",
+               School=PU_NAME ,
+               SchoolIconUri=  PU_URI ,
+               Description = "Self education",
+                 Skills= new List<string>{ Languages.C,Languages.C_PLUS_PLUS }
+          },
+           new(){
+               Key= "psyhilogy",
+               Title="Psyhilogy",
+               StartOn= "2005 sept",
+               EndOn= "2011 july",
+               Degree="Master's & Bachelor's degree",
+               School=PU_NAME ,
+               SchoolIconUri=  PU_URI ,
+               Description = "",
+          },
+        };
+}

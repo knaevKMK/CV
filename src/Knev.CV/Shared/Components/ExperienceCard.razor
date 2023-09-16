@@ -1,0 +1,64 @@
+﻿@using Knev.CV.Models;
+@using static Knev.CV.Constants.SkillIcons;
+@using static Knev.CV.Constants.Component;
+
+<div class="card" style="padding:15px; margin:10px; width:auto; height:17%; ">
+    <div class="card-body">
+
+        <h3 class="card-title" style="font-size:x-large;"> <img src=@Item.LogoUri style="width:3rem;" /> @Item.OwnerTitle</h3>
+
+        <h3 class="card-title" style="font-size:large; font-style:italic;">@Item.Title</h3>
+
+        <p class="card-text">@Item.Description</p>
+
+        <div class="row" style="padding-top:10px; display:block">
+            @if (Item.Skills.Count() > 0)
+            {
+                <h3>
+                    Skills <button class="navbar-toggler" @onclick="() => Toggle(ref collapseSkill)"> @BtnTextSkill </button>
+                </h3>
+                <div class=@CssClassSkills>
+                    <div class="row" style="padding-top:10px; display:block">
+                        @foreach (var skill in Item.Skills)
+                        {
+                            <img src=@skill alt=@skill.Replace("_", "") style="width: 3rem;" />
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row" style="padding-top:10px; display:block">
+            @if (Item.Projects.Count() > 0)
+            {
+                <h3>
+                    Projects <button class="navbar-toggler" @onclick="() => Toggle(ref collapseProjects)"> @BtnTextProjects </button>
+                </h3>
+                <div class=@CssClassProjects>
+                    <div class="row" style="padding-top:10px; display:block">
+                        @foreach (var project in Item.Projects)
+                        {
+                            <span>@project</span>
+                        }
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public ExperienceModel Item { get; set; } = new();
+
+    private bool collapseSkill = true;
+    private string? CssClassSkills => collapseSkill ? COLLAPSE_CLASS : null;
+    private string? BtnTextSkill => collapseSkill ? EXPAND_TEXT : HIDE_TEXT;
+
+    private bool collapseProjects = true;
+    private string? CssClassProjects => collapseProjects ? COLLAPSE_CLASS : null;
+    private string? BtnTextProjects => collapseProjects ? EXPAND_TEXT : HIDE_TEXT;
+    private void Toggle(ref bool collapse)
+    {
+        collapse = !collapse;
+    }
+}

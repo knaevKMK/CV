@@ -1,0 +1,36 @@
+﻿@page "/skills"
+@using static Knev.CV.Constants.SkillIcons;
+@using static Knev.CV.Constants.Component;
+
+<PageTitle>Skills</PageTitle>
+
+
+<h3>
+    Skills
+</h3>
+
+<Knev.CV.Shared.Components.SkillCard Skills=@Ide Title="Ide" />
+
+<Knev.CV.Shared.Components.SkillCard Skills=@DotNet Title=".Net" />
+
+<Knev.CV.Shared.Components.SkillCard Skills=@JavaScript Title="JS & FrontEnd" />
+
+<Knev.CV.Shared.Components.SkillCard Skills=@SQL Title="DataBase & SQL" />
+
+<Knev.CV.Shared.Components.SkillCard Skills=@IaC Title="DevOps & Beckend" />
+
+<Knev.CV.Shared.Components.SkillCard Skills=@Java Title="Java" />
+
+<Knev.CV.Shared.Components.SkillCard Skills=@SourceControl Title="Source Control" />
+
+@code {
+
+    private Dictionary<string, string> Ide => typeof(Ide).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
+    private Dictionary<string, string> DotNet => typeof(DotNet).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
+    private Dictionary<string, string> JavaScript => typeof(JavaScript).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
+    private Dictionary<string, string> SQL => typeof(SQL).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
+    private Dictionary<string, string> IaC => typeof(IaC).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
+    private Dictionary<string, string> Java => typeof(Java).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
+    private Dictionary<string, string> SourceControl => typeof(SourceControl).GetFields().ToDictionary(x => x.Name, x => x.GetValue(x).ToString());
+
+}

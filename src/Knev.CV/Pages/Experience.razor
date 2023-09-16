@@ -1,0 +1,49 @@
+﻿@page "/experience"
+
+@using Knev.CV.Models;
+@using static Knev.CV.Constants.Institution;
+@using static Knev.CV.Constants.SkillIcons;
+
+<PageTitle>Experience</PageTitle>
+
+<h3>Experience</h3>
+
+@foreach (var item in experience)
+{
+    <Knev.CV.Shared.Components.ExperienceCard Item=@item />
+}
+
+@code {
+    private ExperienceModel[] experience = new ExperienceModel[2]
+                {
+                  new(){
+                       Key= "elndo_dev",
+                       Title="Web Developer",
+                       StartOn= "2022 may",
+                       EndOn= "continue",
+                       LogoUri= "http://www.elando.bg/wp-content/uploads/2023/05/fb-logo.jpg",
+                       OwnerTitle= "eLando AD",
+                       Projects  =new List<string>{"Crypto Wallet", "Insurance Portal", "Admin Portal" },
+                       Skills =new List<string>{ IaC.DEVOPS, IaC.CONTINUOUS_DELIVERY, Cloud.AZURE,IaC.AZURE_PIPELINE, IaC.COMPOSER, IaC.DOCKER,IaC.YML,IaC.GRAFANA, IaC.ELASTICSEARCH, IaC.KIBANA,IaC.AZURE_CACHE_REDIS,IaC.AZURE_CONTAINER_REGISTRY,IaC.KUBERNETES,
+                           OS.LINUX, OS.UBUNTO, OS.WINDOWS, Terminals.BASH, Terminals.POWER_SHELL, Ide.VisualStudio, Ide.VS_CODE,Ide.RIDER,
+                           DotNet.DOT_NET, DotNet.DOT_NET_CORE, DotNet.NUGET, DotNet.LINQ, DotNet.DAPPER,DotNet.EF,
+                           JavaScript.REACT, JavaScript.NODE_JS, JavaScript.JQUERY, JavaScript.BOOTSTRAP,JavaScript.NPM,JavaScript.AJAX, JavaScript.HTML_FIVE, JavaScript.CSS_THREE,
+                           IaC.gRPC, IaC.RabbitMQ,
+                           IaC.API_MAIL,IaC.API_SMS, IaC.KYC_VERIFICATION,
+                           SourceControl.AZURE_REPO, WorkBoards.TRELLO, WorkBoards.AZURE_DASBOARD,
+                           Wallet.BLOCKCAHIN,   Wallet.BITCOIN, Wallet.ETHERIUM, Wallet.DODGE, Wallet.MINING_POOL
+                       }
+                  },
+                  new(){
+                       Key= "bootcamp",
+                       Title="Intern .Net Developer",
+                       StartOn= "2021 dec",
+                       EndOn= "2022 may",
+                       LogoUri= SoftUni_URI ,
+                       OwnerTitle=SoftUni_NAME,
+                       Projects  =new List<string>{"UpSkill" },
+                       Description="UpSkill is a learning platform for the business. We power the personal and professional development of the employees for thousands of businesses around the world. You can find top quality courses and coaches in the platform. Sign up for free demo!",
+                       Skills =new List<string>{   Cloud.AZURE, IaC.AZURE_BLOB, IaC.AZURE_SQL,IaC.AZURE_SignalR, IaC.JWT, IaC.DEVOPS,IaC.API_MAIL, Terminals.POWER_SHELL, DotNet.DOT_NET, DotNet.EF,SQL.MICROSOFT_SQL_SERVER,JavaScript.REACT,JavaScript.AJAX,JavaScript.CSS_THREE,JavaScript.HTML_FIVE, SourceControl.GITHUB}
+                  },
+                };
+}

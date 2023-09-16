@@ -1,0 +1,38 @@
+﻿@using static Knev.CV.Constants.Component;
+
+<div class="card" style="padding:15px; margin:10px; width:auto; height:17%; ">
+    <div class="card-body">
+        <h3>
+            @Title
+            <button class="navbar-toggler" @onclick="Toggle">
+                <span class=@BtnIcon></span> @BtnText
+            </button>
+        </h3>
+        <div class=@CssClass>
+            <div class="row" style="padding-top:10px; display:block">
+                @foreach (var skill in Skills)
+                {
+                    //    <span>@skill.Key.Replace("_"," ")
+                    <img src=@skill.Value style="width:4rem; " />
+                    //      </span>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+    [Parameter]
+    public Dictionary<string, string> Skills { get; set; } = new();
+
+    private bool collapseSkill = true;
+
+    private string? CssClass => collapseSkill ? COLLAPSE_CLASS : null;
+    private string? BtnText => collapseSkill ? EXPAND_TEXT : HIDE_TEXT;
+    private string? BtnIcon => !collapseSkill ? EXPAND_ARROW : HIDE_ARROW;
+    private void Toggle()
+    {
+        collapseSkill = !collapseSkill;
+    }
+}
