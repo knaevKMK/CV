@@ -1,3 +1,4 @@
+---
 name: Deploy to GitHub Container Registry
 
 on:
@@ -13,7 +14,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
      
       - name: Set up Docker
         uses: docker/login-action@v1
@@ -26,3 +26,12 @@ jobs:
         run: |
           docker build -t ghcr.io/knaevkmk/cv/cv-img:latest ./src
           docker push ghcr.io/knaevkmk/cv/cv-img:latest
+          
+  redeploy:
+    runs-on: ubuntu-latest
+    depends-on: build
+    steps:
+      - name: Trigger Render.com Deploy Hook
+        uses: joelwmale/webhook-action@master
+        env:
+          WEBHOOK_URL: ${{ secrets.CV_DEPLOY_WEBHOOK_URL}}
